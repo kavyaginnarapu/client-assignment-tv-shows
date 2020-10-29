@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../index.css'
+import '../../index.css'
 
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
@@ -34,7 +34,7 @@ const classes = makeStyles(theme => ({
 }));
 
 
-export class MovieInfo extends Component {
+export class ShowsInfo extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -97,7 +97,6 @@ export class MovieInfo extends Component {
                                         </CardContent>
                                     </Card>
                                 </div>
-
                                 <div className="movieInfo" xs={8} style={{ textAlign: 'justify', }}>
                                     <div className="summary">
                                         <Typography variant="contained" style={{fontWeight: 'bold',fontSize: '18px'}} >
@@ -184,4 +183,4 @@ export class MovieInfo extends Component {
     }
 }
 
-export default MovieInfo
+export default ShowsInfo

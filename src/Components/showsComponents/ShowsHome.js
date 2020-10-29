@@ -8,10 +8,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import StarRoundedIcon from '@material-ui/icons/StarRounded';
 import { Typography } from '@material-ui/core';
-import '../index.css';
-import Pagination from './Pagination';
+import '../../index.css';
+import Pagination from '../pagination/Pagination';
 
-export class MovieHome extends Component {
+export class ShowsHome extends Component {
 
     constructor(props) {
         super(props)
@@ -66,7 +66,6 @@ export class MovieHome extends Component {
     onPageChanged = data => {
         const { tvShows } = this.state;
         const { currentPage, totalPages, pageLimit } = data;
-
         const offset = (currentPage - 1) * pageLimit;
         const currentShows = tvShows.slice(offset, offset + pageLimit);
 
@@ -101,7 +100,7 @@ export class MovieHome extends Component {
                {currentShows.map((item, id) => {
                    return (
                        <div key={id} style={{ textAlign: 'justify' }} className='gridItem' >
-                           <Link style={{ textDecoration: 'none' }} to={`/movieinfo/${item.id}`}  >
+                           <Link style={{ textDecoration: 'none' }} to={`/showsinfo/${item.id}`}  >
                                <div>
                                    <CardMedia style={{ height: 400 }} component="img" image={item.image.original} />
                                    
@@ -166,4 +165,4 @@ export class MovieHome extends Component {
 }
 
 
-export default MovieHome
+export default ShowsHome

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MovieList from './MovieList';
+import ShowsList from './../searchComponents/ShowsList';
 
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
@@ -66,7 +66,7 @@ class Search extends Component {
                         {
                             !isFetching && movies.length > 0 && 
                         <div style={{ height: '200px', overflow: 'auto' }}>
-                            <MovieList list={this.state.movies} />
+                            <ShowsList list={this.state.movies} />
                         </div>
                         }
                 </div>

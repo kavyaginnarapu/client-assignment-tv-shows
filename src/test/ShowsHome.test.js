@@ -2,11 +2,11 @@ import React from "react";
 import { mount, shallow } from "enzyme";
 import sinon from 'sinon';
 import Button from '@material-ui/core/Button';
-import MovieHome from "../movieComponents/MovieHome";
+import ShowsHome from "../Components/showsComponents/ShowsHome";
 import { MemoryRouter } from 'react-router-dom';
 
 let wrapper;
-describe("MovieHome", () => {
+describe("ShowsHome", () => {
 
   beforeAll(() => {
     global.fetch = jest.fn();
@@ -17,7 +17,7 @@ describe("MovieHome", () => {
     wrapper = shallow(
       <MemoryRouter>
 
-        <MovieHome />
+        <ShowsHome />
       </MemoryRouter>,
       { disableLifecycleMethods: true });
   });
@@ -28,7 +28,7 @@ describe("MovieHome", () => {
   it("renders correctly", () => {
     const wrapper1 = shallow(
       <MemoryRouter>
-        <MovieHome />
+        <ShowsHome />
       </MemoryRouter>
 
     );
@@ -37,8 +37,8 @@ describe("MovieHome", () => {
 });
 
 it('should call methodName during componentDidMount', () => {
-  const methodNameFake = jest.spyOn(MovieHome.prototype, 'componentDidMount');
-  const wrapper = shallow(<MovieHome />);
+  const methodNameFake = jest.spyOn(ShowsHome.prototype, 'componentDidMount');
+  const wrapper = shallow(<ShowsHome />);
   
   expect(methodNameFake).toHaveBeenCalledTimes(1);
 });
@@ -49,13 +49,13 @@ it('simulates click events', () => {
 
   const wrapper1 = mount(
     <MemoryRouter>
-      <MovieHome />
+      <ShowsHome />
     </MemoryRouter>
 
   );
   
   // console.log("wrapper1.debug====",wrapper1.find('div'))
-  // const wrapper = mount(<MovieHome />);
+  // const wrapper = mount(<ShowsHome />);
   wrapper.find('#Contact-button-submit').simulate('click');
   // console.log("wrapper debug",wrapper.find('button').simulate('click'))
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
 
-import Pagination from '../movieComponents/Pagination';
+import Pagination from '../Components/pagination/Pagination';
 
 describe("pagination component", () => {
   it("should render my component", () => {

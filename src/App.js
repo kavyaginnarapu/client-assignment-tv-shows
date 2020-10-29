@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
-import Home from './Home';
-import logo from '../src/logo1.png'
+import Routing from './Routing';
+import logo from '../src/logo1.png';
 
 class App extends React.Component {
 
@@ -23,7 +23,7 @@ class App extends React.Component {
               </div>
           </div>
 
-        <Home />
+        <Routing />
       </div>
     );
   }

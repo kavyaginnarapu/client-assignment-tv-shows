@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow,mount } from 'enzyme';
 
-import Search from '../searchComponents/Search';
+import Search from '../Components/searchComponents/Search';
 
 describe("pagination component", () => {
   it("should render my component", () => {

@@ -6,10 +6,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 
-
-
-const MovieListItem = ({movies}) => (
-    <Link style={{ textDecoration: 'none' }} to={`/movieinfo/${movies.show.id}`}  >
+const ShowsListItem = ({movies}) => (
+    <Link style={{ textDecoration: 'none' }} to={`/showsinfo/${movies.show.id}`}  >
 
         
         {movies.show.image && movies.show.image.medium &&
@@ -38,7 +36,7 @@ function MovieList(props) {
         }}>
             <List component="nav">
                 {props.list.map(movies =>(
-                    <MovieListItem movies={movies} key={movies.show.id} />
+                    <ShowsListItem movies={movies} key={movies.show.id} />
                 ))}
             </List>
         </div>
